@@ -1,0 +1,61 @@
+﻿@model IEnumerable<JsonPlayGround.Models.ShulinParkingLotVM>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Shulin Parking Lot</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.zone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicle_classification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Charged)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Disabled_parking_sign)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Disabled_parking_lot)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.zone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vehicle_classification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Charged)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disabled_parking_sign)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disabled_parking_lot)
+            </td>
+        </tr>
+    }
+
+</table>
+
